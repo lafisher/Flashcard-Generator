@@ -1,20 +1,18 @@
-// this is a contructor from an old assignment i pulled over as a starting point. 
+ 
 // i'm very behind this week, i'll have something closer to working ASAP
-
-// dependency for inquirer npm package
+// inquirer npm package
 var inquirer = require("inquirer");
+console.log("This is not the app you are looking for");
 
-// constructor function used to create programmers objects
-function grandMasterFlash(batman, superman, wonderwoman, kidflash, aquaman, greenarrow, robin) {
-  this.batman = batman;
-  this.superman = superman;
-  this.wonderwoman = wonderwoman;
-  this.kidflash = kidflash;
-  this.aquaman = aquaman;
-  this.greenarrow = greenarrow;
-  this.robin = robin;
-}
-
+// card constructor 
+function basicCard(front,back) {
+  this.front = front;
+  this.back = back
+};
+function clozeCard(text,cloze) {
+  this.text = text;
+  this.cloze = cloze
+};
 // quiz method 
 grandMasterFlash.prototype.quiz = function() {
   console.log("Name: " + this.batman + "\nPosition: " + this.superman + "\nAge: " +
@@ -38,9 +36,7 @@ inquirer.prompt([
     message: "What is your favorite programming language?"
   }
 ]).then(function(answers) {
-  // initializes the variable newguy to be a programmer object which will take
-  // in all of the user's answers to the questions above
-  var newGuy = new Programmer(answers.name, answers.position, answers.age, answers.language);
-  // printInfo method is run to show that the newguy object was successfully created and filled
-  newGuy.printInfo();
+
+  var question = new basicCard(answers.name, answers.position, answers.age, answers.language);
+ question.printInfo();
 });
