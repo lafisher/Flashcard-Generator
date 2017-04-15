@@ -13,7 +13,7 @@ function clozeCard(text,cloze) {
   this.text = text;
   this.cloze = cloze
 };
-// quiz method 
+// quiz questions
  var question1 = new basicCard("What is the answer to the ultimate question of life, the universe and everything?", "42");
  console.log(question1.front);
  console.log(question1.back);
