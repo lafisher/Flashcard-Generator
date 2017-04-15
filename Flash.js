@@ -14,8 +14,12 @@ function clozeCard(text,cloze) {
   this.cloze = cloze
 };
 // quiz method 
- var question1 = new basicCard("what is the meaning of life?", "42");
+ var question1 = new basicCard("What is the answer to the ultimate question of life, the universe and everything?", "42");
+ console.log(question1.front);
+ console.log(question1.back);
 
  var question2 = new clozeCard("May the . . . be with you", "force");
+ console.log(question2.text);
+ console.log(question2.cloze);
 
  
